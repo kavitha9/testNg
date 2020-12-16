@@ -47,5 +47,8 @@ public class Assertions {
 	public void test7() {
 		Assert.assertNotEquals("test","test1");
 	}
+	
+	
+
 
 }
