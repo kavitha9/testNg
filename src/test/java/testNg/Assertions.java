@@ -2,6 +2,7 @@ package testNg;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class Assertions {
 
@@ -50,5 +51,20 @@ public class Assertions {
 	
 	
 
+@Test
+public void testSoftAssert() {
+	
+	SoftAssert ast=new SoftAssert();
+	System.out.println("soft assert started");
+	ast.assertEquals(3, 9);
+	System.out.println("soft assert ended");//this code is executed even if the test fails
+	ast.assertAll();
+	
+}
 
+@Test
+public void testHardAssert() {
+	Assert.assertEquals(3, 9);
+	System.out.println("test hard assert");
+}
 }
